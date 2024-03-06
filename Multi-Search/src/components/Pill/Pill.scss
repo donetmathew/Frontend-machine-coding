@@ -1,0 +1,18 @@
+.pill{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: black;
+    color: #cccc;
+    border-radius: 22px;
+    padding: 5px 9px;
+    font-size: 11px;
+    margin: 5px;
+    cursor: pointer;
+    img{
+        height: 15px;
+    }
+    span{
+        text-wrap:nowrap;
+    }
+}

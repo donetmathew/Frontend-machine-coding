@@ -1,12 +1,23 @@
 .multiSearch {
-  &__input {
-    display: flex;
     justify-content: center;
-    padding: 5px;
     width: 80%;
     border: 1px solid #ccc;
+    &__input {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    }
+  &__input:focus{
+    outline: none;
+   }
+  &__selectedUsers{
+    display: flex;
+    flex-wrap: wrap;
   }
-  &__input ~ ul {
+  &__conatiner{
+    display:flex;
+  }
+  &__list {
     width: fit-content;
     max-height: 300px;
     overflow-y: scroll;
@@ -15,20 +26,22 @@
     margin: 0;
     position: absolute;
     background-color: #fff;
-    border:1px solid #ccc
+    border: 1px solid #ccc;
+    li {
+        display: flex;
+        align-items: center;
+        height: 29px;
+        gap: 5px;
+        padding: 5px;
+        cursor: pointer;
+        img {
+          height: 20px;
+          border-radius: 50%;
+        }
+      }
   }
-  &__input ~ ul > li {
-    display: flex;
-    align-items: center;
-    height: 29px;
-    gap: 5px;
-    padding: 5px;
-    img {
-      height: 20px;
-      border-radius: 50%;
-    }
-  }
-  &__input ~ ul > li:not(:last-child) {
+ 
+  &__list > li:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
 }
